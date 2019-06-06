@@ -1,0 +1,16 @@
+use feature "say";
+say 'We are going to take an average of all the testst you have taken(assuming that all the tests are weighted the same).';
+my $num;
+print 'How many tests tests have you taken so far: ';
+$num=<STDIN>;
+my $sum=0;
+for(my $i=1;$i<=$num;$i++)
+{
+my $score;
+print 'What was the score of test number #'.$i.':';
+$score=<STDIN>;
+$sum+=$score;
+}
+my $total;
+$total=$sum/$num;
+say 'Your average score is: '.$total;
