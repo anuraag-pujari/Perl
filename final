@@ -1,0 +1,27 @@
+use feature "say";
+say 'This is a final grade calculator!!!!!';
+print 'How much is the final worth in your class: ';
+my $per=<STDIN>;
+print 'What was your grade on the final: ';
+my $perc=<STDIN>;
+print 'What is your grade in the class right now: ';
+my $grade=<STDIN>;
+my $percent=(100-$per)/100;
+my $percent2=1-$percent;
+my $overall=($percent*$grade)+($perc*$percent2);
+if($overall>=90)
+{
+say 'Great job you got an A in the class.';
+}elsif($overall>=80)
+{
+say 'Not bad you got a B in the class.';
+}elsif($overall>=70)
+{
+say 'You did ok in the class you ended with a C.';
+}elsif($overall>=60)
+{
+say 'You should've worked harder you ended with a D.';
+}else
+{
+say 'You failed the class better luck next time.';
+}
